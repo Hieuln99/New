@@ -1,8 +1,11 @@
 const express = require ('express')
 const {Int32} = require('mongodb');
+const exphbs = require('express-handlebars');
 const { insertStudent, DeleteS, Search, updateStudent, getAll, getStudent} = require('./databasehandle');
 
 const app = express()
+app.engine('handlebars',exphbs())
+app.set('view engine', 'handlebars')
 
 app.use(express.urlencoded({extended: true}))
 app.set('view engine','hbs')
@@ -20,6 +23,11 @@ app.get('/delete',async (req,res)=>{
     await DeleteS(IdInput)
     res.redirect('/');
 })
+app.get('/addToy',(req,res)=>{
+    res.render('addToy')
+})
+
+
 app.post('/search',async (req,res)=>{
     const SearchIn = req.body.txtSearch;
     const allStudents = await Search(SearchIn);
