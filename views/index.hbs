@@ -19,15 +19,25 @@
     Tuoi <input type="text" name="txtTuoi" value="{{tuoi}}">
     <br>
     <input type="submit" value="Insert">
-
     </form>
-    <ul>
+   
+    <table width="50%" border="1">
+        <tr>
+            <td>Name</td>
+            <td>Tuoi</td>
+            <td>Delete</td>
+            <td>Edit</td>
+        </tr>
+  
     {{#each data}}
-    <li> {{name}}..{{tuoi}} 
-   <a href="/delete?id={{_id}}">Delete</a>
-   <a href="/edit?id={{_id}}">Edit</a>
-   </li>
+        <tr>
+            <td>{{name}}</td>
+            <td>{{tuoi}}</td>
+            <td><a href="/delete?id={{_id}}">Delete</a></td>
+            <td><a href="/edit?id={{_id}}">Edit</a></td>
+        </tr>  
     {{/each}}
-    </ul>
+  
+    </table>
 </body>
 </html>
