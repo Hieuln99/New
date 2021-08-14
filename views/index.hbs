@@ -12,16 +12,16 @@
     <form action="/search" method="post">
     Search <input type="text" name="txtSearch">
     <input type="submit" value="Search"> </form>
-
+    
     <form action="/insert" method="post">
     Name <input type="text" name="txtName" value="{{name}}">
     <br>
-    Tuoi <input type="text" name="txtTuoi" value="{{tuoi}}">
-    <br>
+    Tuoi <input type="text" name="txtTuoi" val 
     <input type="submit" value="Insert">
     </form>
-   
-    <table width="50%" border="1">
+    <br>
+   <span >
+    <table width="90%" border="1" style="margin: auto;"
         <tr>
             <td>Name</td>
             <td>Tuoi</td>
@@ -37,7 +37,7 @@
             <td><a href="/edit?id={{_id}}">Edit</a></td>
         </tr>  
     {{/each}}
-  
+  </span>
     </table>
 </body>
 </html>
