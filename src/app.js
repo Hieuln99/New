@@ -26,7 +26,9 @@ app.get('/delete',async (req,res)=>{
 app.get('/addToy',(req,res)=>{
     res.render('addToy')
 })
-
+app.get('/information',(req,res)=>{
+    res.render('information')
+})
 
 app.post('/search',async (req,res)=>{
     const SearchIn = req.body.txtSearch;
