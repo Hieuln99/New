@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" >
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
 {{!-- Header --}}
@@ -31,7 +31,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/addToy">Add Product</a>
-                            <a class="dropdown-item" href="/edit">Edit Product</a>
+                            <a class="dropdown-item" href="/editfirst">Edit Product</a>
                         </div></td>
                     <td><li class="nav-item">
                         <a class="nav-link" href="/information">About</a>
@@ -83,7 +83,7 @@
         <tr>
             <td>{{name}}</td>
             <td><img src="{{pic}}" alt=""></td>
-            <td>{{price}}</td>
+            <td>${{price}}</td>
             <td><a href="/delete?id={{_id}}">Delete</a></td>
             <td><a href="/edit?id={{_id}}">Edit</a></td>
         </tr>  
