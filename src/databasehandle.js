@@ -8,7 +8,7 @@ async function getdb() {
     const dbo = client.db(DATABASE_NAME);
     return dbo;
 }
-async function insertStudent(newStudent) {
+async function insert(newStudent) {
     const dbo = await getdb();
     const newS = await dbo.collection(DATABASE_NAME).insertOne(newStudent);
     console.log("ID: ", newS.insertedId.toHexString());
@@ -17,7 +17,7 @@ async function DeleteS(IdInput) {
     const dbo = await getdb();
     await dbo.collection(DATABASE_NAME).deleteOne({ _id: ObjectId(IdInput) });
 }
-async function getStudent(Id) {
+async function getPro(Id) {
     const dbo = await getdb();
     return dbo.collection(DATABASE_NAME).findOne({ _id: ObjectId(Id) });
 }
@@ -36,4 +36,4 @@ async function Search(SearchIn) {
     return allStudents;
 }
 
-module.exports={getdb, insertStudent, DeleteS, updateStudent,getStudent, Search, getAll}
+module.exports={getdb, insert, DeleteS, updateStudent,getPro, Search, getAll}
