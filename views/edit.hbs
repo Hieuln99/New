@@ -10,8 +10,8 @@
 <body>
 {{!-- Header --}}
     <div id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-            <h1 style="color: rgb(85, 47, 107);"> Shop Toys ATN </h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary text-white">
+            <h1 style="color: rgb(255, 255, 255);"> Shop Toys ATN </h1>
         
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
     <td>Name</td> <td><input type="text" name="txtName" value="{{pro.name}}"></td>
 </tr>
 <tr>
-   <td>Pic</td> <td><input type="text" name="txtPic" value="{{pro.pic}}"</td>
+   <td>Picture</td> <td><input type="text" name="txtPic" value="{{pro.pic}}"</td>
 </tr>
 <tr>
    <td>Price</td> <td><input type="text" name="txtPrice" value="{{pro.price}}"></td>
@@ -70,8 +70,8 @@
 
     <table width="90%" style="margin: auto;">
         <tr>
-            <td>Name</td>
-            <td>Picture</td>
+            <td></td>
+            <td></td>
             <td>Price</td>
             <td>Delete</td>
             <td>Edit</td>
@@ -82,8 +82,13 @@
             <td>{{name}}</td>
             <td><img src="{{pic}}" alt=""></td>
             <td>${{price}}</td>
-            <td><a href="/delete?id={{_id}}">Delete</a></td>
-            <td><a href="/edit?id={{_id}}">Edit</a></td>
+            <td><a href="/delete?id={{_id}}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-x-fill" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM6.854 8.146a.5.5 0 1 0-.708.708L7.293 10l-1.147 1.146a.5.5 0 0 0 .708.708L8 10.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 10l1.147-1.146a.5.5 0 0 0-.708-.708L8 9.293 6.854 8.146z"/>
+</svg></a></td>
+            <td><a href="/edit?id={{_id}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16">
+  <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z"/>
+</svg></a></td>
         </tr>  
     {{/each}}
     </table>
