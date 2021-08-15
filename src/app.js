@@ -68,7 +68,7 @@ app.get('/editfirst',async (req,res)=>{
     res.render('edit',{data:all})
 })
 
-app.get('/about',async (req,res)=>{
+app.get('/information1',async (req,res)=>{
     const all =  await getAll();
     res.render('information',{data:all})
 })
