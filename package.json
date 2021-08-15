@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hieuln99/New.git"
+    "url": "git+https://github.com/Hieuln99/justkidding.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hieuln99/New/issues"
+    "url": "https://github.com/Hieuln99/justkidding/issues"
   },
-  "homepage": "https://github.com/Hieuln99/New#readme",
+  "homepage": "https://github.com/Hieuln99/justkidding#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
