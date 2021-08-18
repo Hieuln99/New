@@ -30,6 +30,11 @@ app.post('/search',async (req,res)=>{
     const all = await Search(SearchIn);
     res.render('index',{data:all})
 })
+app.post('/search1',async (req,res)=>{
+    const SearchIn = req.body.txtSearch;
+    const all = await Search(SearchIn);
+    res.render('edit',{data:all})
+})
 app.post('/update',async (req,res)=>{
     const Id = req.body.id;
     const nameInput = req.body.txtName;
