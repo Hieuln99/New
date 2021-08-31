@@ -11,7 +11,7 @@ async function getdb() {
 async function insertP(newProduct) {
     const dbo = await getdb();
     const newS = await dbo.collection(DATABASE_NAME).insertOne(newProduct);
-    console.log("ID: ", newS.insertedId.toHexString());
+    console.log("ID: ", newS.insertedId.toHexString()); 
 }
 async function DeleteP(IdInput) {
     const dbo = await getdb();
