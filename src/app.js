@@ -78,7 +78,7 @@ app.get('/information1',async (req,res)=>{
     res.render('information',{data:all})
 })
 
-const PORT = process.env.PORT ||5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT);
 
 
